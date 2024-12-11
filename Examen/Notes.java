@@ -1,4 +1,5 @@
 package Examen;
+
 import Inscription.Etudiant;
 
 public class Notes {
@@ -7,12 +8,12 @@ public class Notes {
     private Matiere matiere;
     private double valeurNote;
 
-    public Notes(Etudiant etudiant , Matiere matiere , double valeurNote)
-    {
+    public Notes(Etudiant etudiant, Matiere matiere, double valeurNote) {
         this.etudiant = etudiant;
         this.matiere = matiere;
         this.valeurNote = valeurNote;
     }
+
     // Getter et Setter pour `etudiant`
     public Etudiant getEtudiant() {
         return etudiant;
@@ -38,5 +39,15 @@ public class Notes {
 
     public void setValeurNote(double valeurNote) {
         this.valeurNote = valeurNote;
+    }
+
+    @Override
+    public String toString() {
+        return "Note{" +
+                "etudiant='" + etudiant.GetNom() + '\'' +
+                ", matricule='" + etudiant.GetMatricule() + '\'' +
+                ", Coef='" + matiere.getCoef() + '\'' +
+                ", note ='" + getValeurNote() + '\'' +
+                '}';
     }
 }

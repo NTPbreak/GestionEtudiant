@@ -6,12 +6,12 @@ public class Matiere {
     private String nom;
     private double coef;
 
-    public Matiere(String code , String nom, double coef)
-    {
+    public Matiere(String code, String nom, double coef) {
         this.code = code;
         this.coef = coef;
         this.nom = nom;
     }
+
     // Getter et Setter pour `code`
     public String getCode() {
         return code;
@@ -39,5 +39,12 @@ public class Matiere {
         this.coef = coef;
     }
 
-  
+    @Override
+    public String toString() {
+        return "Matiere{" +
+                "nom='" + nom + '\'' +
+                ", code='" + code + '\'' +
+                ", coef='" + coef + '\'' +
+                '}';
+    }
 }

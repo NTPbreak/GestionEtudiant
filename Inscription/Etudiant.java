@@ -1,20 +1,13 @@
 package Inscription;
 
+
 public class Etudiant {
 
     private String mat;
     private String nom;
     private String prenom;
     private int age;
-    private double moyenne;
 
-    public Etudiant(String nom, String prenom, String mat, int age,double moyenne ) {
-        this.age = age;
-        this.nom = nom;
-        this.mat = mat;
-        this.prenom = prenom;
-        this.moyenne = moyenne;
-    }
 
     public Etudiant(String nom, String prenom, String mat, int age) {
         this.age = age;
@@ -23,6 +16,8 @@ public class Etudiant {
         this.prenom = prenom;
     }
 
+
+    
     public void SetMatricule(String mat) {
         this.mat = mat;
     }
@@ -56,14 +51,7 @@ public class Etudiant {
     }
 
     
-    public void SetMoyenne(double moyenne) {
-        this.moyenne = moyenne;
-    }
-
-    public double GetMoyenne() {
-        return this.moyenne;
-    }
-
+ 
     @Override
     public String toString() {
         return "Etudiant{" +
@@ -71,7 +59,6 @@ public class Etudiant {
                 ", prenom='" + prenom + '\'' +
                 ", mat='" + mat + '\'' +
                 ", age=" + age +
-                ", moyenne=" + moyenne +
                 '}';
     }
 }
